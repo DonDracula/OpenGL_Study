@@ -6,7 +6,8 @@
 
 static GLfloat angle = 0.0f;
 
-void myDispaly(void )
+
+void myDisplay(void )
 {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);//清空深度缓冲和颜色缓冲
 
@@ -89,7 +90,7 @@ void myIdle(void)
 angle +=1.0f;
 if(angle >=360.0f)
 	angle =0.0f;
-myDispaly();
+myDisplay();
 }
 
 int main(int argc,char*argv[])
@@ -99,7 +100,7 @@ int main(int argc,char*argv[])
 	glutInitWindowPosition(200,200);
 	glutInitWindowSize(WIDTH,HEIGHT);
 	glutCreateWindow("OpenGl Light Demo");
-	glutDisplayFunc(&myDispaly);
+	glutDisplayFunc(&myDisplay);
 	glutIdleFunc(&myIdle);
 	glutMainLoop();
 	return 0;
