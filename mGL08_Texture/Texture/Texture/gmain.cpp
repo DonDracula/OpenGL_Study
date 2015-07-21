@@ -11,6 +11,7 @@
 #define BMP_Header_Length 54
 void grab(void)
 {
+	glReadBuffer(GL_FRONT);
  FILE* pDummyFile;
  FILE* pWritingFile;
  GLubyte* pPixelData;
